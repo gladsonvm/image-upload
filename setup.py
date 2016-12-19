@@ -7,6 +7,7 @@ setup(
     description='An api to C/R/U/D files using Django Rest Framework',
     long_description=open('README.md').read(),
     install_requires=[
+        "django",
         "djangorestframework",
         ],
     dependency_links = [
