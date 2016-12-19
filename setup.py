@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 setup(
     name='iman',
     packages=find_packages(),
-    url='https://github.abc.com/gladsonvm/fileupload-api',
+    url='https://github.com/gladsonvm/image-upload',
     description='An api to C/R/U/D files using Django Rest Framework',
     long_description=open('README.md').read(),
     install_requires=[
