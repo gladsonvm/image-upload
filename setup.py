@@ -10,7 +10,7 @@ setup(
         "djangorestframework",
         ],
     dependency_links = [
-     'http://github.com/gladsonvm/fileupload-api/iman/tarball/master#egg=package-1.0'
+     'https://github.com/gladsonvm/image-upload/tarball/master#egg=package-1.0'
     ],
     include_package_data=True,
 )
