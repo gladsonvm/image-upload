@@ -3,7 +3,7 @@ from .models import FileUploads
 
 
 class FileUploadSerializer(serializers.ModelSerializer):
-    file = serializers.FileField(required=True)
+    image = serializers.ImageField(required=True)
 
     def create(self, validated_data):
         user_id = self.context.get('request').user.id
@@ -11,13 +11,13 @@ class FileUploadSerializer(serializers.ModelSerializer):
         return FileUploads.objects.create(**validated_data)
 
     def validate_file(self, value):
-        if value.size < 25000000:
+        if value.content_type.split('/')[0] == 'image' and value.size < 25000000:
             return value
-        raise serializers.ValidationError('Error: Upload file with filesize below 25Mb.')
+        raise serializers.ValidationError('Error: Upload an image with file size below 25Mb.')
 
     class Meta:
         model = FileUploads
-        fields = ('filename', 'file')
+        fields = ('filename', 'image')
         lookup_field = 'filename'
         extra_kwargs = {
             'url': {'lookup_field': 'filename'}
