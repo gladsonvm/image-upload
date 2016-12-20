@@ -12,19 +12,19 @@ Add
 'iman' to installed apps in settings.py
 
 
-INSTALLED_APPS = [ \
-    'django.contrib.admin',\
-    'django.contrib.auth',\
-    'django.contrib.contenttypes',\
-    'django.contrib.sessions',\
-    'django.contrib.messages',\
-    'django.contrib.staticfiles',
-    'rest_framework',
-    'rest_framework.authtoken',
-    'iman',
-    ...
-    ...
-]
+INSTALLED_APPS = [ <br/>
+    'django.contrib.admin', <br/>
+    'django.contrib.auth',<br/>
+    'django.contrib.contenttypes',<br/>
+    'django.contrib.sessions',<br/>
+    'django.contrib.messages',<br/>
+    'django.contrib.staticfiles',<br/>
+    'rest_framework',<br/>
+    'rest_framework.authtoken',<br/>
+    'iman',<br/>
+    ...<br/>
+    ...<br/>
+]<br/>
 
 ##Migrations
 
